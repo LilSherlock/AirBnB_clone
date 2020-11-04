@@ -7,7 +7,7 @@ import models
 
 
 class BaseModel:
-    """ Base models """
+    """ class basemodel """
 
     def __init__(self, *args, **kwargs):
         """constructor method"""
@@ -36,7 +36,7 @@ class BaseModel:
         models.storage.save()
 
     def to_dict(self):
-        """ add new items to the dict """
+        """ add new items to the dict method """
 
         new_dict = dict(self.__dict__)
         new_dict["__class__"] = self.__class__.__name__
