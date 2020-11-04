@@ -13,17 +13,27 @@ from os import path
 
 
 class FileStorage:
-    """ file storage """
-
+    """This class serializes instances to a JSON file and
+    deserializes JSON file to instances
+    Attributes:
+        __file_path: path to the JSON file
+        __objects: objects will be stored
+    """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """ all method """
+        """returns a dictionary
+        Return:
+            returns a dictionary of __object
+        """
         return self.__objects
 
     def new(self, obj):
-        """ new method """
+        """sets __object to given obj
+        Args:
+            obj: given object
+        """
         if obj:
             key = "{}.{}".format(type(obj).__name__, obj.id)
             self.__objects[key] = obj
