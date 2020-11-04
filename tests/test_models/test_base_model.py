@@ -1,9 +1,7 @@
-
 #!/usr/bin/python3
 """test for BaseModel"""
 import unittest
 import os
-from datetime import datetime
 from models.base_model import BaseModel
 import pep8
 
