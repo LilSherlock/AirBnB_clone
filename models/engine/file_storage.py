@@ -9,7 +9,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-
 from os import path
 
 
@@ -30,17 +29,21 @@ class FileStorage:
             self.__objects[key] = obj
 
     def save(self):
-        """ save method """
-        new_dict = {}
+        """serialize the file path to JSON file path
+        """
+        my_dict = {}
         for key, value in self.__objects.items():
-            new_dict[key] = value.to_dict()
-        with open(self.__file_path, 'w') as new_file:
-            json.dump(new_dict, new_file)
+            my_dict[key] = value.to_dict()
+        with open(self.__file_path, 'w', encoding="UTF-8") as f:
+            json.dump(my_dict, f)
 
     def reload(self):
-        """ reload method """
-        if path.exists(self.__file_path):
-            with open(self.__file_path, mode='r', encoding='utf-8') as f:
-                json_dict = json.loads(f.read())
-                for key, value in json_dict.items():
-                    self.__objects[key] = eval(value['__class__'])(**value)
+        """serialize the file path to JSON file path
+        """
+        try:
+            with open(self.__file_path, 'r', encoding="UTF-8") as f:
+                for key, value in (json.load(f)).items():
+                    value = eval(value["__class__"])(**value)
+                    self.__objects[key] = value
+        except FileNotFoundError:
+            pass
