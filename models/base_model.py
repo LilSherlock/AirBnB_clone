@@ -27,12 +27,12 @@ class BaseModel:
         """ string method """
 
         return "[{}] ({}) {}".format(
-            self.__class__.__name__, self.id, self.__dict__)
+            type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """ update time method """
 
-        self.update_at = datetime.now()
+        self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
@@ -41,5 +41,5 @@ class BaseModel:
         new_dict = dict(self.__dict__)
         new_dict["__class__"] = self.__class__.__name__
         new_dict["created_at"] = self.created_at.isoformat()
-        new_dict["update_at"] = self.update_at.isoformat()
+        new_dict["updated_at"] = self.updated_at.isoformat()
         return new_dict
