@@ -35,7 +35,7 @@ class FileStorage:
         for key, value in self.__objects.items():
             new_dict[key] = value.to_dict()
         with open(self.__file_path, 'w') as new_file:
-            new_file.write(json.dumps(new_dict))
+            json.dump(new_dict, new_file)
 
     def reload(self):
         """ reload method """
