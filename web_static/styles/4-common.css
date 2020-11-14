@@ -1,0 +1,35 @@
+body {
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #484848;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #FF5A5F;
+    height: 48px;
+    width: 20%;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: none;
+    margin-right: 30px;
+    float: right;
+    margin-bottom: 30px;
+    outline: none;
+}
+.button:hover {
+    opacity: 90%;
+    border: none;
+}
+
+.button p {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
