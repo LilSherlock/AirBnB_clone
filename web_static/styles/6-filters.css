@@ -8,34 +8,56 @@
 }
 .locations {
     border-right: #DDDDDD 1px solid;
+    border-radius: 4px;
+    padding-right: 100px;
 }
 .amenities {
-    border-right: rgb(167, 120, 33) 1px solid;
+    padding-right: 25%;
 }
 .locations, .amenities{
     height: 100%;
-    margin: auto;
     width: 25%;
 }
 
 .locations h3, .amenities h3 {
     font-weight: 600;
+    margin-left: 30px;
 }
 
 .locations h4, .amenities h4 {
     color: #484848;
     font-weight: 400;
     margin-top: -7%;
+    margin-left: 30px;
     font-size: 14px;
 }
 
-.popover ul{
+/* Popover */
+.popover {
     width: 100%;
+    display: none;
     border: #DDDDDD 1px solid;
-    padding: 0%;
     border-radius: 4px;
+    background-color: #FAFAFA;
+    padding-right: 45%;
+    margin-top:-1%;
 }
-
+.popover h2 {
+    margin: 1%;
+}
+.popover li {
+    margin-left: 10%;
+}
+.amenities .popover li {
+    margin-left: 1%;
+}
+.amenities .popover{
+    margin-top: -1.5%;
+}
+.locations:hover .popover, .amenities:hover .popover{
+    display: block;
+}
 .popover li{
     list-style-type: none;
 }
+/* end popover */
