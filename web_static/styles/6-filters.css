@@ -4,26 +4,27 @@
     width: 100%;
     border: 1px #DDDDDD solid;
     border-radius: 4px;
+    display: flex;
 }
 .locations {
     border-right: #DDDDDD 1px solid;
 }
-
-.locations, .amenities {
+.amenities {
+    border-right: rgb(167, 120, 33) 1px solid;
+}
+.locations, .amenities{
     height: 100%;
+    margin: auto;
     width: 25%;
-    display: inline-block;
 }
 
 .locations h3, .amenities h3 {
     font-weight: 600;
-    padding-left: 50px;
 }
 
 .locations h4, .amenities h4 {
     color: #484848;
     font-weight: 400;
-    padding-left: 50px;
     margin-top: -7%;
     font-size: 14px;
 }
@@ -31,8 +32,10 @@
 .popover ul{
     width: 100%;
     border: #DDDDDD 1px solid;
+    padding: 0%;
+    border-radius: 4px;
 }
 
-.popover li {
+.popover li{
     list-style-type: none;
 }
