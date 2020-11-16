@@ -1,12 +1,14 @@
 footer {
-    background-color: white;
+    background-color: #FFF;
     height: 60px;
+    white-space: nowrap;
     width: 100%;
+    line-height: 60px;
     position: absolute;
-    border-top: 1px solid #cccccc;
-    bottom: 0;
-}
-p {
-    text-align: center;
-    padding: 5px;
+    bottom: 0px;
+    border-bottom: 1px #CCC;
+    border-top: 1px solid #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
